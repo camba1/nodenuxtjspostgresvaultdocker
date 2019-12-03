@@ -61,3 +61,7 @@ docker restart <containerName>
 ```
 
 Note that Nodemon is installed and functional in the nodejs container, so any changes made to the node code should restart the node server automatically without having to restart the container.
+
+### Bring application down
+
+Use ```docker-compose down``` in the same directory where you have the docker-compose file to bring the application down.
