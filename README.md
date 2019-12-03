@@ -54,6 +54,7 @@ If you do not have npm installed in your machine, from the root folder of our re
 docker-compose run --rm  nodepg bash
 npm install
 exit
+docker-compose down
 ```
 
 The above commands will:
@@ -61,6 +62,7 @@ The above commands will:
 - Start the nodepg service defined in our docker-compose file and log you  into the console in the container
 - In the container, run npm install, which creates the node_modules folder in the container. Since we have a volume mounted in our container to the nodeApp folder in our machine (as defined in our dockercompose file), the node_modules folder gets created in our host machine as well and is ready for use.
 - Exit the container and return to our host machine
+- Bring the application down
 
 ### Bring the application up
 
