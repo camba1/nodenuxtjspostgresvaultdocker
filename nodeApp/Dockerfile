@@ -3,7 +3,7 @@ FROM node
 WORKDIR /code
 COPY package.json /code
 
-RUN npm install -g nodemon@1.19.1
+RUN npm install -g nodemon
 RUN npm install pg
 RUN npm install express
 

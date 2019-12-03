@@ -1,0 +1,26 @@
+version: "3.7"
+
+services:
+  myPostgresDB:
+    image: postgres
+    restart: always
+    container_name: nodepgdbcont
+    environment:
+      - POSTGRES_PASSWORD=TestDB@home2
+    volumes:
+      - ./postgres/postgresDB:/var/lib/postgresql/data
+      - ./postgres/postgresInit:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
+  mynodeapp:
+    build: ./nodeApp
+    depends_on:
+      - myPostgresDB
+    container_name: nodepg
+    command: nodemon -L
+    volumes:
+      - ./nodeApp:/code
+    ports:
+      - "8000:8000"
+      - "5858:5858"
+      - "3000:3000"
