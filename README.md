@@ -20,6 +20,22 @@ Note that to automatically remove the container every time it is stopped, you ca
 docker run --rm -p 3000:3000 --name nodepgcont nodepg
 ```
 
+## Vault
+
+### Configuration
+
+Vault is running on it own container and listening on port 8200 by default and is currently configured to use the filesystem as a backend. It is also configured to enable the UI in localhost:8200. Finally tls is currently disabled (should be on for production)
+
+### Unlocking
+
+- Login to the container and then:
+```vault operator init```
+- Write down somewhere safe the unseal keys and the root Token
+- Unseal vault by running the command below ( 3 times, each time with a different unseal key)
+```vault operator unseal <key>```
+- Login to Vault for the first time with the root Token
+```vault login <root token>```
+
 ## Docker-compose
 
 ### Creating the node_modules folder
@@ -65,3 +81,7 @@ Note that Nodemon is installed and functional in the nodejs container, so any ch
 ### Bring application down
 
 Use ```docker-compose down``` in the same directory where you have the docker-compose file to bring the application down.
+
+## Running tests
+
+The nodejs application uses cucumber as the testing framework. To run the tests, just execute ```npm test``` All test are located in the ./nodeApp/features directory
