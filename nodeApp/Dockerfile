@@ -6,6 +6,7 @@ COPY package.json /code
 RUN npm install -g nodemon
 RUN npm install pg
 RUN npm install express
+RUN npm install cucumber 
 
 RUN npm install
 
