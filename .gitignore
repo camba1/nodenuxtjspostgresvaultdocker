@@ -1,3 +1,5 @@
 node_modules/
 .DS_Store
 postgres/postgresDB/
+vaultWithDocker/vault/logs/
+vaultWithDocker/vault/data/
