@@ -12,7 +12,7 @@ services:
       - ./postgres/postgresInit:/docker-entrypoint-initdb.d
     ports:
       - "5432:5432"
-  mynodeapp:
+  nodepg:
     build: ./nodeApp
     depends_on:
       - myPostgresDB
