@@ -36,6 +36,10 @@ Vault is running on it own container and listening on port 8200 by default and i
 - Login to Vault for the first time with the root Token
 ```vault login <root token>```
 
+## Traefik
+
+Traefik will server as a proxy for the application. while the configuration of the individual routs can be done in the docker-compose file, the ./traefik/traefik.yml hold the default route and the security mode.
+
 ## Docker-compose
 
 ### Creating the node_modules folder
