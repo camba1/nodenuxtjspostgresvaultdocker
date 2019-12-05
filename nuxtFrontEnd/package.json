@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
-    "start": "nuxt start",
+    "start": "nuxt start"
   },
   "dependencies": {
     "nuxt": "^2.10.2"
