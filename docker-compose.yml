@@ -55,3 +55,12 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./traefik/traefik.yml:/etc/traefik/traefik.yml
+  nuxtfrontend:
+    build: ./nuxtFrontEnd
+    depends_on:
+      - nodepg
+    container_name: nuxtfrontend
+    volumes:
+      - ./nuxtFrontEnd:/usr/src/app/
+    ports:
+      - 3001:3000

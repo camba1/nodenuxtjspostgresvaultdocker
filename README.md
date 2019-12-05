@@ -74,12 +74,19 @@ If you have npm installed in your machine:
 ``` bash
 cd ./nodeApp
 npm install
+cd ../nuxtFrontEnd
+npm install
 ```
 
 If you do not have npm installed in your machine, from the root folder of our repo (where we have the docker-compose file):
 
 ``` bash
 docker-compose run --rm  nodepg bash
+npm install
+exit
+docker-compose down
+
+docker-compose run --rm  nuxtfrontend bash
 npm install
 exit
 docker-compose down
