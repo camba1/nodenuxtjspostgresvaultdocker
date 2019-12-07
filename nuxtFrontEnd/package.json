@@ -1,16 +1,24 @@
 {
-  "name": "nuxtFronEnd",
-  "version": "0.0.1",
-  "description": "Full stack holiday project - front end",
-  "main": "./src/index.js",
-  "author": "Juan Peredo Bolbeck LLC <jperedo@Bolbeck.com>",
-  "license": "MIT",
+  "name": "nuxtFrontEnd",
+  "version": "1.0.0",
+  "description": "Nuxt front end for app",
+  "author": "Juan Peredo",
+  "private": true,
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
-    "start": "nuxt start"
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "test": "jest"
   },
   "dependencies": {
-    "nuxt": "^2.10.2"
+    "nuxt": "^2.0.0",
+    "nuxt-buefy": "^0.3.2"
+  },
+  "devDependencies": {
+    "@vue/test-utils": "^1.0.0-beta.27",
+    "babel-jest": "^24.1.0",
+    "jest": "^24.1.0",
+    "vue-jest": "^4.0.0-0"
   }
 }
