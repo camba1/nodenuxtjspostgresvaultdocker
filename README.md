@@ -11,10 +11,10 @@ To bring the application up ,use the following command to build the image and ru
 ``` bash
 docker build -t nuxtfrontend .
 docker run -p 3000:3000 --name nuxtfrontendcont nuxtfrontend
- ```
+```
 
-Then, in your browser go to  ``` localhost:3000 ```
-Note that to automatically remove the container every time it is stopped, you can use the follwoing command:
+Then, in your browser go to  ```localhost:3000```
+Note that to automatically remove the container every time it is stopped, you can use the following command:
 
 ``` bash
 docker run --rm -p 3000:3000 --name nuxtfrontendcont nuxtfrontend
