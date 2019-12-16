@@ -1,6 +1,6 @@
 # NodeNuxtjsPostgresVaultDocker
 
-Sample application that uses Server side rendering on the front end Using `Nuxtjs` and `Nodejs` with `Express` for the backend. `Traefik` is used for for service discovery and load balancing. Finally, `Vault` to secure credentials among other things.
+Sample application that uses Server side rendering on the front end Using `Nuxtjs` and `Nodejs` with `Express` for the backend. `Traefik` is used for for service discovery and load balancing. `NATS` is used for event and messaging communication.  Finally, `Vault` to secure credentials among other things.
 
 All pieces of the application will be setup to run in `Docker` containers for easy deployment and will eventually be deployed to run on `Kubernetes` which will be running in `Minikube`
 
@@ -74,6 +74,10 @@ Vault is running on it own container and listening on port 8200 by default and i
 ```vault operator unseal <key>```
 - Login to Vault for the first time with the root Token
 ```vault login <root token>```
+
+## NATS
+
+Nats will be used for event and messaging between the different microservices
 
 ## Traefik
 
