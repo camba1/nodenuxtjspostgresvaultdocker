@@ -1,12 +1,14 @@
 # NodeNuxtjsPostgresVaultDocker
 
-Sample application that uses Server side rendering on the front end and Vault to secure credentials among other things
+Sample application that uses Server side rendering on the front end Using `Nuxtjs` and `Nodejs` with `Express` for the backend. `Traefik` is used for for service discovery and load balancing. Finally, `Vault` to secure credentials among other things.
+
+All pieces of the application will be setup to run in `Docker` containers for easy deployment and will eventually be deployed to run on `Kubernetes` which will be running in `Minikube`
 
 ## Nuxtjs application
 
 ### Using the Dockerfile
 
-To bring the application up ,use the following command to build the image and run the container in the ./nuxtFrontEnd directory:
+To bring the application up ,use the following command to build the image and run the container in the `./nuxtFrontEnd `directory:
 
 
 ``` bash
@@ -23,6 +25,16 @@ docker run --rm -p 3000:3000 --name nuxtfrontendcont nuxtfrontend
 ```
 
 Since the Nuxt front end depends on other parts of the app, trying to open any page that needs data could result in an error. As such it is usually better to bring it up with docker-compose along with the other part of the app.
+
+
+### Front End framework
+
+The application will be using `Buefy` as the front end framwork. Buefy is a Vuejs implementation of `Bulma` and that plays very well with SSR.
+
+### Running tests
+
+The nuvtjs application uses `Jest` as the testing framework. To run the tests, just execute ```npm test``` All test are located in the ./nuxtFrontEnd/test directory.
+
 
 ## Node Application
 
@@ -45,7 +57,7 @@ docker run --rm -p 3000:3000 --name nodepgcont nodepg
 
 ### Running tests
 
-The nodejs application uses cucumber as the testing framework. To run the tests, just execute ```npm test``` All test are located in the ./nodeApp/features directory
+The nodejs application uses `Cucumber` as the testing framework. To run the tests, just execute ```npm test``` All test are located in the ./nodeApp/features directory
 
 ## Vault
 
