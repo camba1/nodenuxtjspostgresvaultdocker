@@ -8,12 +8,14 @@ Sample application that uses Server side rendering on the front end and Vault to
 
 To bring the application up ,use the following command to build the image and run the container in the ./nuxtFrontEnd directory:
 
+
 ``` bash
 docker build -t nuxtfrontend .
 docker run -p 3000:3000 --name nuxtfrontendcont nuxtfrontend
 ```
 
-Then, in your browser go to  ```localhost:3000```
+
+Then, in your browser go to  `localhost:3000`
 Note that to automatically remove the container every time it is stopped, you can use the following command:
 
 ``` bash
