@@ -30,12 +30,13 @@ Since the Nuxt front end depends on other parts of the app, trying to open any p
 
 To bring the application up ,use the following command to build the image and run the container in the ./nodeApp directory:
 
+
 ``` bash
 docker build -t nodepg .
 docker run -p 3000:3000 --name nodepgcont nodepg
- ```
+```
 
-Then, in your browser go to  ``` localhost:3000 ```
+Then, in your browser go to  `localhost:3000`
 Note that to automatically remove the container every time it is stopped, you can use the follwoing command:
 
 ``` bash
