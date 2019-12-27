@@ -41,6 +41,7 @@ services:
       - "8000:8000"
       - "5858:5858"
       - "3000:3000"
+    env_file: nodeenv.env
   nats:
     image: nats
     ports:

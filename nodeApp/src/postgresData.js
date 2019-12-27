@@ -1,13 +1,21 @@
-const Pool = require('pg').Pool
-const pool = new Pool({
-  user: 'postgres',
-  host: 'myPostgresDB',
-  database: 'postgres',
-  password: 'TestDB@home2',
-  port: '5432'
-})
+// const Pool = require('pg').Pool
+// const vaultData = require('./vaultData');
+// const creds = vaultData.getConnectDetails();
+// const pool = new Pool({
+//   //user: creds.username,
+//   user: 'postgres',
+//   host: 'myPostgresDB',
+//   //database: creds.password,
+//   database: 'postgres',
+//   password: 'TestDB@home2',
+//   port: '5432'
+// })
 
-const getPostgresData = (request, response) => {
+var dbConnect = require('./dbConnect');
+
+
+const getPostgresData = async (request, response) => {
+  const pool = await dbConnect.connect();
   pool.query('SELECT * FROM test ORDER BY id ASC', (error, results) => {
     if (error) {
       throw error

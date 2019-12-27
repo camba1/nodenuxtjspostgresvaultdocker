@@ -2,6 +2,8 @@
 
 const express = require('express');
 const postgresdb = require('./postgresData')
+// const vaultData = require('./vaultData');
+
 
 
 // Constants
@@ -21,6 +23,11 @@ app.get('/postgres', (req, res) => {
   postgresdb.getPostgresData(req, res)
   }
 );
+// app.get('/vault', (req, res) => {
+//   console.log(pool)
+//   //vaultData.getConnectDetails()
+//   }
+// );
 
 app.listen(PORT, HOST);
 console.log(`Running on http://${HOST}:${PORT}`);
