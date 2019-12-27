@@ -1,6 +1,6 @@
 # Vault
 
-## Setup Vault to ,anage the DB credentials
+## Setup Vault to manage the DB credentials
 
 Vault can leverage the DB DB secrets engine to manage the passwords for the DB. To do this we must follow the steps below:
 
@@ -27,7 +27,7 @@ vault write database/config/postgresql \
 vault write -force database/rotate-root/postgresql
 ```
 
-# Getting Vault to manage DB credentials
+## Getting Vault to manage DB credentials
 To let Vault manage your DB credentials, we must first decide between static credentials (manage only an existing user's password) vs dynamic credentials (Vault creates and manages user, password and user access). While the Vault procedure to either of those options is quite similar,``` the implication on how you will manage security are quite significant. One requires more human planning while the other is almost fully automated.
 
 allowed_roles="*" \
